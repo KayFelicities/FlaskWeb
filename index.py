@@ -5,7 +5,7 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
-    return flask.redirect("http://127.0.0.1:8023")
+    return flask.render_template('main.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run('0.0.0.0', 80)
