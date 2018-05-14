@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+	<form action="{{ url_for('login') }}" class="form text-left" method="post" style="width:50%; margin:auto">
+    {{ form.csrf_token }}	
+    <!-- {{ wtf.quick_form(form) }}	 -->
+    {{ wtf.form_field(form.user, autocomplete="off", autofocus="autofocus") }}
+    {{ wtf.form_field(form.password, autocomplete="off", autofocus="autofocus") }}
+    {{ wtf.form_field(form.submit, class="btn btn-primary btn-block btn-lg") }}
+	</form>
+{% endblock %}
+
+
+{% block footer %}
+<p>Designed by Kay. With love.</p>
+<p style="color:red; font-size:21px">♥</p>
+{% endblock %}
