@@ -14,7 +14,7 @@ bootstrap = Bootstrap(app)
 class LoginForm(FlaskForm):
     user = wtforms.StringField(u'用户名', validators=[DataRequired('用户名不能为空')])
     password = wtforms.PasswordField(u'密码', validators=[DataRequired()])
-    submit = wtforms.SubmitField(u'提交')
+    submit = wtforms.SubmitField(u'确定')
 
 
 @app.route('/')
